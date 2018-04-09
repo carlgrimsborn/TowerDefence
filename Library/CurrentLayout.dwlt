@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1648
-    y: 459
-    width: 1134
+    x: 244
+    y: 45
+    width: 1196
     height: 855
   m_ShowMode: 4
   m_Title: 
