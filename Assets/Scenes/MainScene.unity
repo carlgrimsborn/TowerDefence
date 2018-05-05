@@ -1292,6 +1292,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4969945123368350, guid: 87ea2d9061c8348929e62ce2671a77ff,
     type: 2}
   m_PrefabInternal: {fileID: 181994527}
+--- !u!114 &214054951 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114620360095805908, guid: 529d285e4a92eeb4a840b81118bc4803,
+    type: 2}
+  m_PrefabInternal: {fileID: 397579064}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &215952885 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1470789575305152, guid: 843b8436c178e46e7989835488ba9676,
@@ -1940,6 +1946,7 @@ GameObject:
   - component: {fileID: 305977091}
   - component: {fileID: 305977090}
   - component: {fileID: 305977092}
+  - component: {fileID: 305977093}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -1989,8 +1996,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTurretPrefab: {fileID: 1122666119512548, guid: f471295674ba9478189dae3b7bf49d76,
     type: 2}
-  missileLauncherPrefab: {fileID: 1122666119512548, guid: daf2d0a10809b054ea6ac4c66dbe4088,
+  missileLauncherPrefab: {fileID: 1576193197671176, guid: 5f4667c3f452aef44aa880a5eef59bac,
     type: 2}
+--- !u!114 &305977093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 305977089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec525bfbe1ddab41af26a9aaa882ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!1001 &321597513
 Prefab:
   m_ObjectHideFlags: 0
@@ -2646,7 +2665,7 @@ Prefab:
     - target: {fileID: 224184917724966236, guid: 529d285e4a92eeb4a840b81118bc4803,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 472.5
+      value: 635.5
       objectReference: {fileID: 0}
     - target: {fileID: 224184917724966236, guid: 529d285e4a92eeb4a840b81118bc4803,
         type: 2}
@@ -2701,6 +2720,16 @@ Prefab:
     - target: {fileID: 1469386195919222, guid: 529d285e4a92eeb4a840b81118bc4803, type: 2}
       propertyPath: m_Name
       value: StandardTurretItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785968567361992, guid: 529d285e4a92eeb4a840b81118bc4803,
+        type: 2}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 214054951}
+    - target: {fileID: 114785968567361992, guid: 529d285e4a92eeb4a840b81118bc4803,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectStandardTurret
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 529d285e4a92eeb4a840b81118bc4803, type: 2}
@@ -2810,6 +2839,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de24a1a67a2b474bb718ed997fb5235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 1122666119512548, guid: f471295674ba9478189dae3b7bf49d76, type: 2}
+    cost: 100
+  missileLauncher:
+    prefab: {fileID: 1576193197671176, guid: 5f4667c3f452aef44aa880a5eef59bac, type: 2}
+    cost: 250
 --- !u!1001 &403017702
 Prefab:
   m_ObjectHideFlags: 0
@@ -3391,7 +3426,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4936209096183492, guid: 843b8436c178e46e7989835488ba9676, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 52
+      value: 52.5
       objectReference: {fileID: 0}
     - target: {fileID: 4936209096183492, guid: 843b8436c178e46e7989835488ba9676, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10041,7 +10076,7 @@ Prefab:
     - target: {fileID: 224184917724966236, guid: 529d285e4a92eeb4a840b81118bc4803,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 612.5
+      value: 765.5
       objectReference: {fileID: 0}
     - target: {fileID: 224184917724966236, guid: 529d285e4a92eeb4a840b81118bc4803,
         type: 2}
@@ -10051,7 +10086,7 @@ Prefab:
     - target: {fileID: 224184917724966236, guid: 529d285e4a92eeb4a840b81118bc4803,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 130
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 224184917724966236, guid: 529d285e4a92eeb4a840b81118bc4803,
         type: 2}
@@ -10105,7 +10140,28 @@ Prefab:
     - target: {fileID: 114785968567361992, guid: 529d285e4a92eeb4a840b81118bc4803,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseMissileLauncher
+      value: SelectMissileLauncher
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620360095805908, guid: 529d285e4a92eeb4a840b81118bc4803,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620360095805908, guid: 529d285e4a92eeb4a840b81118bc4803,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b7e7367df46befe4986ceb728ca909f4,
+        type: 3}
+    - target: {fileID: 114374545676385150, guid: 529d285e4a92eeb4a840b81118bc4803,
+        type: 2}
+      propertyPath: m_PreferredWidth
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 114374545676385150, guid: 529d285e4a92eeb4a840b81118bc4803,
+        type: 2}
+      propertyPath: m_PreferredHeight
+      value: 110
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 529d285e4a92eeb4a840b81118bc4803, type: 2}
