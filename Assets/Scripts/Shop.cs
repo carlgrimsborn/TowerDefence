@@ -2,6 +2,7 @@
 
 public class Shop : MonoBehaviour {
 
+<<<<<<< HEAD
     public TurretBlueprint standardTurret;
     public TurretBlueprint missileLauncher;
 
@@ -31,3 +32,27 @@ public class Shop : MonoBehaviour {
 
     }
 }
+=======
+	BuildManager buildManager;
+
+	void Start () {
+
+		buildManager = BuildManager.instance;
+
+	}
+
+	public void PurchaseStandardTurret () {
+
+		Debug.Log("standardTurret");
+		buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
+
+	}
+
+	public void PurchaseMissileLauncher () {
+
+		Debug.Log("missilskjutare vald");
+		buildManager.SetTurretToBuild(buildManager.missileLauncherPrefab);
+
+	}
+}
+>>>>>>> 1c4152528858e10df41acd63d95ab7fba8aafd34

@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ebaa556a2ba17ea4bb50c7f5a30298b2
 timeCreated: 1524920955
+=======
+guid: acfaae25ffc154df4b67658e7697c6ae
+timeCreated: 1524228400
+>>>>>>> 1c4152528858e10df41acd63d95ab7fba8aafd34
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -29,7 +34,11 @@ ModelImporter:
     4300004: Turret
   externalObjects: {}
   materials:
+<<<<<<< HEAD
     importMaterials: 1
+=======
+    importMaterials: 0
+>>>>>>> 1c4152528858e10df41acd63d95ab7fba8aafd34
     materialName: 0
     materialSearch: 1
     materialLocation: 1
